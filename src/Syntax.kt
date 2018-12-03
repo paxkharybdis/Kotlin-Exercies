@@ -186,8 +186,49 @@ fun main(args: Array<String>){
         t++
     }while (t <= 10)
     println()
+    println()
 
+    // Loop control statements.
+    // Break
+    println("Break demonstration.")
+    for (u in 1..10) {
+        print(u)
+        if (u == 5)
+            break
+        if (u < 10) {
+            print(", ")
+        }
+    }
+    println()
+    println()
 
+    println("Named for loop with named break.")
+    myLoop@ for (v in 1..5){
+        for (w in 1..5) {
+            println("$v$w")
+            if (v == 3 && w == 4)
+                break@myLoop
+        }
+    }
+
+    // Continue statements
+    println("Continuous statement example.")
+    firstLoop@ for (x in 1..5){
+        for (y in 1..5) {
+            if (x == 2 && y == 3)
+                continue@firstLoop
+            println("$x$y")
+        }
+    }
+
+    // Methods: structure.
+    fun findAreaInt(length: Int, width: Int): Int {
+        return length * width
+    }
+
+    fun findAreaUnit(length: Int, width: Int) { // No colon with return type is Void by default.
+        print(length * width)
+    }
 
 
     // End of function.
@@ -199,3 +240,4 @@ class Rectangle {
     var length: Int = 0
     var width: Int = 0
 }
+
