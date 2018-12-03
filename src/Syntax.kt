@@ -97,8 +97,7 @@ fun main(args: Array<String>){
 
     }
     println("The current variable $maxValue is greater than $c.")
-    println()
-    println()
+
 
     val x = 21
 
@@ -125,13 +124,11 @@ fun main(args: Array<String>){
     println(str2)
     println()
 
-
     // Iterator examples for printing "Hello" four times.
     println("For loop.")
     for (p in 1..4){
         println("Hello.")
     }
-    println()
     println()
 
     println("While loop.")
@@ -141,7 +138,6 @@ fun main(args: Array<String>){
         p++
     }
     println()
-    println()
 
     println("Do...while.")
     var q = 2
@@ -150,12 +146,51 @@ fun main(args: Array<String>){
         q++
     } while (q < 5)
     println()
+
+    // Loops, cont.
+    // For
+    println("For loop to print even numbers from 1 to 10.")
+    for (r in 1..10) {
+        if (r % 2 == 0)
+            print(r)
+        if (r < 10 && (r % 2 == 0)) {
+            print(", ")
+        }
+    }
+    println()
     println()
 
-// Loops, cont.
-    for (i in 1..10)
+    //While
+    println("While loop output.")
+    var s = 1
+    while (s <= 10) {
+        print(s)
+        s++
+        if (s < 11) {
+            print(", ")
+        }
+    }
+    println()
+    println()
+
+    // Do-while
+    println("Do-while output.")
+    var t = 1
+    do {
+        if (t % 2 == 0){
+            print(t)
+        }
+        if (t < 10 && (t % 2 == 0)) {
+            print(", ")
+        }
+        t++
+    }while (t <= 10)
+    println()
 
 
+
+
+    // End of function.
 }
 
 
