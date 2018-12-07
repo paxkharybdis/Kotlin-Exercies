@@ -24,6 +24,15 @@ fun main(args: Array<String>){
     var str3:String = "Hey "
     println(str3.add(str1, str2))
 
+    val x: Int = 6
+    val y: Int = 10
+
+    val greaterVal = x.greaterValue(y)
+    println("$greaterVal is the larger number.")
+
+    val biggerVal = x biggerValue y
+    println("Infix example: $biggerVal is the larger number.")
+
 }
 
 //Specify value types used.  No return type specified.
@@ -76,5 +85,22 @@ fun String.add(s1: String, s2:String): String {
     return this + s1 + s2
 }
 
+// Another example of finding greater value.
+fun Int.greaterValue(other: Int): Int {
+    return if (this > other)
+        this
+    else
+        other
+}
+
+// Infix Functions
+// INFIX functions have only ONE parameter
+
+infix fun Int.biggerValue(other: Int): Int {
+    return if (this > other)
+        this
+    else
+        other
+}
 
 
