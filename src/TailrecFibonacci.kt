@@ -5,15 +5,16 @@ import java.math.BigInteger
 
 fun main(args: Array<String>){
 
-    println(getFibonacciNumber(7, BigInteger("1"), BigInteger("0")))
+    println(getFibonacciNumber(10000, BigInteger("1"), BigInteger("0")))
 
 }
 
 
-fun getFibonacciNumber(n: Int, a: BigInteger, b: BigInteger): BigInteger {
+tailrec fun getFibonacciNumber(n: Int, a: BigInteger, b: BigInteger): BigInteger {
 
     if (n == 0)
-        return belse
+        return b
+    else
     return getFibonacciNumber(n -1, a + b, a)
 
 
